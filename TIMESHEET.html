@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICONS USAGE -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS LINK-->
+    <link rel="stylesheet" href="CSS/timesheet.css">
+    <title>Time Sheet</title> 
+</head>
+<body>
+    <div class="container-sheet">
+        <div class="container-subsheet">
+            <div class="timesheet">
+                <h1>TIME SHEET</h1>
+            </div>
+        
+            <div class="btn-import-sheet">
+                <button type="button" class="btn" onclick="UploadFileInput()"><i class='bx bx-import'></i>Import Time Sheet</button>
+                <input type="file" id="FileInput" class="file-input" accept=".csv, .xls, .xlsx, .ods, .xlsm, .xlsb" style="display: none;" onchange="ImportData"/>
+            </div>
+        </div>
+        
+        <div class="btn-sheet">
+            <div class="btn-type">
+                <button type="button" class="btn" style="cursor: pointer;">CSV</button>
+                <button type="button" class="btn" style="cursor: pointer;">COPY</button>
+                <button type="button" class="btn" style="cursor: pointer;">PRINT</button>
+                <button type="button" class="btn" style="cursor: pointer;">PDF</button>
+            </div>
+        </div>
+
+        <div class="table">
+            <table id="TimesheetTable">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Employee Name</th>
+                    <th>Day</th>
+                    <th>Time In</th>
+                    <th>Time Out</th>
+                    <th>Time In</th>
+                    <th>Time Out</th>
+                    <th>Next Day</th>
+                    <th>Hours Work</th>
+                </tr>
+                <!-- Dynamic rows dito -->
+            </table>
+        </div>
+    </div>
+    <!-- Link to the script -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.1/xlsx.full.min.js"></script>
+    <script src="js/timesheet.js"></script>
+</body>
+</html>

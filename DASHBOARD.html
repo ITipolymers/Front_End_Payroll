@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOXICONS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="CSS/dashboard.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+      <ul>
+          <li>
+              <a href='#' class="logo">
+                <span class="icon"><i class='bx bxs-invader'></i></span>
+                <span class="text">Lean Testing</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('HOME.html')">
+                <span class="icon"><i class='bx bxs-home'></i></span>
+                <span class="text">HOME</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('EMPLOYEE.html')">
+                <span class="icon"><i class='bx bxs-user'></i></span>
+                <span class="text">EMPLOYEE</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('TIMESHEET.html')">
+                <span class="icon"><i class='bx bxs-time'></i></span>
+                <span class="text">TIME SHEET</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('payroll.html')">
+                <span class="icon"><i class='bx bxs-credit-card-alt'></i></span>
+                <span class="text">PAYROLL</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('reports.html')">
+                <span class="icon"><i class='bx bxs-report'></i></span>
+                <span class="text">REPORTS</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="#" onclick="loadPage('settings.html')">
+                <span class="icon"><i class='bx bxs-cog'></i></span>
+                <span class="text">SETTINGS</span>
+              </a>
+          </li>
+
+          <li>
+              <a href="login.html">
+                <span class="icon"><i class='bx bxs-log-out'></i></span>
+                <span class="text">LOGOUT</span>
+              </a>
+          </li>
+      </ul>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+      <iframe id="contentFrame" src="HOME.html" frameborder="0" style="width:100%; height:100vh; border:none;"></iframe>
+      <script src="js/dashboard.js"></script>
+  </div>
+</body>
+</html>

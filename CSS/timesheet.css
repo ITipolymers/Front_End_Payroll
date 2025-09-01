@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:  border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
+}
+
+.container-subsheet {
+    display: flex;
+    justify-content: space-between; /* pushes title left, buttons right */
+    align-items: center;            /* vertically align */
+    width: 100%;
+    padding: 70px 290px;             /* adjust spacing */
+}
+
+.timesheet h1 {
+    margin: 0; /* remove default spacing */
+}
+
+.btn-import-sheet {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-sheet{
+    display: flex;
+    align-items: center;            /* vertically align */
+    width: 100%;
+    padding: 10px 290px;             /* adjust spacing */
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #7494ec;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #eb6161;
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;          /* center horizontally */
+    table-layout: fixed;     /* fix column widths */
+}
+
+.table {
+    display: flex;
+    justify-content: center; /* keep centered horizontally */
+    align-items: flex-start; /* align table to top instead of center */
+    min-height: 100vh;       /* optional: page height */
+    padding-top: 20px;       /* spacing from top */
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    word-wrap: break-word;   /* prevent overflow text */
+}
+
+tr:nth-child(even) { background-color: #f2f2f2; }
+tr:hover { background-color: #a2c2eb; }
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #7494ec;
+    color: white;
+}

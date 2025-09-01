@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOXICONS USAGE -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS LINK-->
+    <link rel="stylesheet" href="CSS/employee.css">
+    <title>EMPLOYEE DETAILS</title> 
+</head>
+<body>
+    <div class="container-main">
+        <div class="container-sub">
+            <div class="employee">
+                <h1>EMPLOYEE DETAILS</h1>
+            </div>
+        
+            <div class="btn-import-addemp">
+                <button type="button" class="btn"><i class='bx bx-import' ></i>Import Employee</button>
+                <button type="button" class="btn" onclick="addEmployee()"><i class='bx bxs-contact' ></i>Add Employee</button>
+            </div>
+        </div>
+        
+        <div class="btn-container">
+            <div class="btn-type">
+                <button type="button" class="btn" style="cursor: pointer;">CSV</button>
+                <button type="button" class="btn" style="cursor: pointer;">COPY</button>
+                <button type="button" class="btn" style="cursor: pointer;">PRINT</button>
+                <button type="button" class="btn" style="cursor: pointer;">PDF</button>
+            </div>
+        </div>
+
+        <div class="table">
+            <div>
+                <table id="employeeTable">
+                    <tr>
+                        <th>No</th>
+                        <th>Full Name</th>
+                        <th>Position</th>
+                        <th>Email</th>
+                        <th>Biometrics ID</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Form for Add/Edit Employee -->
+    <div id="popupForm" class="form-popup" style="display: none;"> <!-- Added display: none -->
+        <div class="form-container">
+            <h3>Add Employee</h3>
+            <label>Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter full name">
+
+            <label>Position</label>
+            <input type="text" id="position" placeholder="Enter position">
+
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter email">
+
+            <label>Biometrics ID</label>
+            <input type="text" id="biometricsId" placeholder="Enter biometrics ID">
+
+            <label>Status</label>
+            <input type="text" id="status" placeholder="Enter status">
+
+            <!-- Updated the save button with id 'saveButton' -->
+            <button type="button" class="btn" id="saveButton" onclick="saveEmployee()">Save</button>
+            <button type="button" class="btn" onclick="closeForm()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Link to the script -->
+    <script src="js/employee-script.js"></script>
+</body>
+</html>

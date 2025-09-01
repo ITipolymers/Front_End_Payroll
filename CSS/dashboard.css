@@ -1,0 +1,104 @@
+/* Import ng Google Font na 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General reset ng margin at padding, at pag-set ng font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para mas madaling i-handle ang layout */
+    font-family: 'Poppins', sans-serif; /* Gamitin ang Poppins font sa lahat */
+}
+
+/* Background color ng buong body */
+body {
+    background: #edeaea; /* Light gray background */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed; /* Mananatili kahit mag-scroll */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height ng screen */
+    width: 75px; /* Default na width kapag hindi naka-hover */
+    z-index: 1; /* Para nasa ibabaw ng ibang elements */
+    background: #7494ec; /* Blue background ng sidebar */
+    overflow-x: hidden; /* Huwag ipakita ang horizontal scrollbar */
+    padding-top: 10px;
+    transition: 0.6s ease; /* Smooth na transition kapag lumalaki */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow effect */
+}
+
+/* Kapag naka-hover ang sidebar, lalaki ito */
+.sidebar:hover {
+    width: 250px; /* Lumalawak ang sidebar kapag naka-hover */
+    transition: 0.6s ease; /* Smooth transition */
+}
+
+/* Lahat ng <ul> sa loob ng sidebar */
+.sidebar ul {
+    position: relative;
+    height: 97vh; /* 97% ng viewport height para may space sa baba */
+}
+
+/* Bawat <li> sa sidebar */
+.sidebar ul li {
+    list-style: none; /* Alisin ang bullet points */
+    margin: 5px 0; /* Kaunting space sa pagitan ng bawat item */
+}
+
+/* Hover effect sa bawat list item */
+.sidebar ul li:hover {
+    background: #eb6161; /* Pulang background kapag naka-hover */
+    transition: 0.3s ease; /* Smooth na pagbabago ng kulay */
+}
+
+/* Mga link sa loob ng bawat list item */
+.sidebar ul li a {
+    position: relative;
+    display: flex; /* Para side by side ang icon at text */
+    white-space: nowrap; /* Huwag i-break ang text */
+    text-decoration: none; /* Alisin ang underline sa links */
+    color: #fff; /* Puting text */
+}
+
+/* Logo area sa sidebar */
+.sidebar ul li .logo {
+    margin-bottom: 80px; /* Space sa ilalim ng logo */
+}
+
+/* Text ng logo */
+.sidebar ul li .logo .text {
+    font-size: 18px;
+    font-weight: 600; /* Medyo makapal ang font */
+}
+
+/* Ang huling list item (madalas ginagamit sa logout) ay nasa pinakababa */
+.sidebar ul li:last-child {
+    position: absolute;
+    bottom: 0; /* Itulak sa pinakababa */
+    width: 100%; /* Buong lapad ng sidebar */
+}
+
+/* Icon area sa link */
+.sidebar ul li a .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 75px; /* Parehong lapad ng sidebar sa default state */
+    height: 60px;
+    font-size: 22px; /* Laki ng icon */
+}
+
+/* Text label ng link */
+.sidebar ul li a .text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 16px;
+    text-transform: uppercase; /* Lahat ng letra ay uppercase */
+    letter-spacing: 0.6px; /* Kaunting space sa pagitan ng mga letra */
+    font-weight: 500; /* Medium na kapal ng font */
+}
