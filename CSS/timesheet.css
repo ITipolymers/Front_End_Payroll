@@ -11,6 +11,34 @@ body {
     background: linear-gradient(90deg, #e2e2e2, #c9d6ff);
 }
 
+.search-container-timesheet{
+  display: flex;
+  justify-content: center; /* center horizontally */
+  padding-top: 30px;       /* adjust distance from top */
+}
+
+.search-box-container{
+  position: relative;
+  width: 500px;
+}
+
+.search-box-container i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+}
+
+.search-box-container input {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* dagdag space sa left para may room yung icon */
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+}
+
 .container-subsheet {
     display: flex;
     justify-content: space-between; /* pushes title left, buttons right */
@@ -85,3 +113,4 @@ th {
     background-color: #7494ec;
     color: white;
 }
+
